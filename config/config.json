@@ -1,0 +1,188 @@
+{
+  "generators": [
+    {
+      "filename" : "/PATH/TO/nuiscomp_genie_g1802a0211a.root",
+      "title": "GENIE G1802a0211a",
+      "color": 600
+    },
+    {
+      "filename" : "/PATH/TO/nuiscomp_genie_g1810a0211a.root",
+      "title": "GENIE G1810a0211a",
+      "color": 417
+    },
+    {
+      "filename" : "/PATH/TO/nuiscomp_genie_g1810b0211a.root",
+      "title": "GENIE G1810b0211a",
+      "color": 633
+    },
+    {
+      "filename" : "/PATH/TO/nuiscomp_201912/nuwro/nuiscomp_nuwro.root",
+      "title": "NuWro 19.02.1",
+      "color": 800
+    },
+    {
+      "filename" : "/PATH/TO/nuiscomp_201912/neut/nuiscomp_neut.root",
+      "title": "NEUT 5.4.0",
+      "color": 880
+    }
+  ],
+
+  "plots": [
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpmu_nu"
+    },
+    {
+      "sample": "MicroBooNE_CCInc_XSec_2DPcos_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtCH_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1Dpt_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1Dpz_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DQ2QE_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DEnuQE_nu",
+      "legend_pos": "LR"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpmu_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dthmu_nu",
+      "legend_pos": "LC"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpprot_nu",
+      "legend_pos": "LL"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dthprot_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpnreco_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddalphat_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddpt_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddphit_nu"
+    },
+    {
+      "sample": "MINERvA_CCQE_XSec_1DQ2_nu"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_20deg"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_fluxcorr"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_20deg_fluxcorr"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_20deg"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_fluxcorr"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_20deg_fluxcorr"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_2017"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_2017"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dpmu_nu_2017"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dthmu_nu_2017",
+      "legend_pos": "LC"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DQ2_nu_2017"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DEnu_nu_2017",
+      "legend_pos": "LC"
+    },
+    {
+      "sample": "T2K_CC0pinp_STV_XSec_1Ddpt_nu"
+    },
+    {
+      "sample": "T2K_CC0pinp_STV_XSec_1Ddphit_nu"
+    },
+    {
+      "sample": "T2K_CC0pinp_STV_XSec_1Ddat_nu",
+      "legend_pos": "LC"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_2Dpmucosmu_nu"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1Dppi_nu",
+      "xrange": [0, 3]
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1Dthpi_nu"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1Dthmupi_nu"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1DQ2_nu"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1DAdlerPhi_nu",
+      "legend_pos": "LL"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1DCosThAdler_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "type": "2DSlice",
+      "sample": "MicroBooNE_CCInc_XSec_2DPcos_nu",
+      "nrows": 3,
+      "ncols": 3,
+      "subplot": {
+        "ymax": 25e-39,
+        "legend_pos": [0.4, 0.3, 0.95, 0.8],
+        "fontsize": 0.075,
+        "xtitle": "p_{#mu}^{reco} [GeV]",
+        "ytitle": "#frac{d^{2}#sigma}{dp_{#mu}^{reco}dcos(#theta_{#mu}^{reco})} [cm^{2}/GeV n]"
+      },
+      "annotate": [
+        "-1.00 < cos(#theta_{#mu}^{reco}) < -0.50",
+        "-0.50 < cos(#theta_{#mu}^{reco}) < -0.00",
+        "0.00 < cos(#theta_{#mu}^{reco}) < 0.27",
+        "0.27 < cos(#theta_{#mu}^{reco}) < 0.45",
+        "0.45 < cos(#theta_{#mu}^{reco}) < 0.62",
+        "0.62 < cos(#theta_{#mu}^{reco}) < 0.76",
+        "0.76 < cos(#theta_{#mu}^{reco}) < 0.86",
+        "0.86 < cos(#theta_{#mu}^{reco}) < 0.94",
+        "0.94 < cos(#theta_{#mu}^{reco}) < 1.00"
+      ]
+    }
+  ]
+}
