@@ -17,6 +17,7 @@ void Plot1D::AxisRangeX::operator()(TH1D* h) {
 
 Plot1D::LegendPos::LegendPos(json::Value& vpos) {
   if (vpos.getType() == json::TSTRING) {
+    // Use a pre-defined position
     std::string spos = vpos.getString();
     if      (spos == "UL") set( true, 0.18, 0.65, 0.51, 0.85);
     else if (spos == "UC") set( true, 0.33, 0.65, 0.66, 0.85);
@@ -27,6 +28,7 @@ Plot1D::LegendPos::LegendPos(json::Value& vpos) {
     else                   set(false, 0.00, 0.00, 0.00, 0.00);
   }
   else if (vpos.getType() == json::TARRAY) {
+    // User-specified position
     std::vector<double> lcoord = vpos.toVector<double>();
     set(true, lcoord[1], lcoord[1], lcoord[2], lcoord[3]);
   }
@@ -44,7 +46,7 @@ void Plot1D::LegendPos::set(bool _draw, float _x1, float _y1, float _x2, float _
 
 Plot1D::Plot1D(json::Value& c)
     : Plot(c), hdata(nullptr), xranger(nullptr), ymax(-1) {
-  // Configure x range, if set
+  // Load settings
   if (c.isMember("xrange")) {
     std::vector<double> range = c.getMember("xrange").toVector<double>();
     assert(range.size() == 2);
@@ -67,7 +69,6 @@ Plot1D::Plot1D(json::Value& c)
     annotate = c.getMember("annotate").getString();
   }
 
-  // Configure legend position, if set
   if (c.isMember("legend_pos")) {
     json::Value& vpos = c.getMember("legend_pos");
     lloc = LegendPos(vpos);
@@ -162,12 +163,14 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
     l->Draw();
   }
 
+  // Add annotation label, if any
   TLatex* tla = nullptr;
   if (!annotate.empty()) {
     tla = new TLatex;
     tla->SetTextFont(132);
     tla->DrawLatexNDC(0.5, 0.9, annotate.c_str());
   }
+
   pad->Update();
 
   // Save the final canvas
@@ -175,6 +178,7 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
     pad->SaveAs(filename.c_str());
   }
 
+  // Delete the TCanvas if we own it
   if (own_pad) {
     delete pad;
   }

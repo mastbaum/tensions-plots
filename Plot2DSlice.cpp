@@ -11,17 +11,22 @@
 #include "Generator.h"
 
 void Plot2DSlice::add(Generator* gen) {
-  // Discover slices
+  // Discover slices by looping over available keys. Note: The case for these
+  // keys is not consistent across measurements.
   std::string mc_name = sample + "_MC_Slice";
+  std::string mc_name_lower = sample + "_mc_slice";
+
   std::string data_name = sample + "_data_Slice";
+  std::string data_name_lower = sample + "_data_slice";
+
   std::vector<std::string> mc_slice_objs;
   std::vector<std::string> data_slice_objs;
 
   for (std::string& key : gen->keys) {
-    if (key.starts_with(mc_name)) {
+    if (key.starts_with(mc_name) || key.starts_with(mc_name_lower)) {
       mc_slice_objs.push_back(key);
     }
-    if (key.starts_with(data_name)) {
+    if (key.starts_with(data_name) || key.starts_with(data_name_lower)) {
       data_slice_objs.push_back(key);
     }
   }
@@ -41,6 +46,7 @@ void Plot2DSlice::add(Generator* gen) {
     assert(nfound == nslices);
   }
 
+  // Check number of annotations (if there are any) matches
   if (!annotate.empty()) {
     assert(nfound == annotate.size());
   }

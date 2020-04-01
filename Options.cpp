@@ -7,12 +7,6 @@ Options::Options(int argc, char* argv[]) : Options() {
   int c;
   while ((c = getopt(argc, argv, "abc:")) != -1) {
     switch (c) {
-      case 'a':
-        aflag = 1;
-        break;
-      case 'b':
-        bflag = 1;
-        break;
       case 'c':
         config = optarg;
         break;

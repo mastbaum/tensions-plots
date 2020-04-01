@@ -46,13 +46,37 @@ public:
    */
   class LegendPos {
   public:
+    /** Default ctor. */
     LegendPos() : draw(true), x1(0.50), y1(0.65), x2(0.88), y2(0.85) {}
 
+    /**
+     * Constructor with explicit settings.
+     *
+     * @param _draw Draw the legend?
+     * @param _x1 Lower x
+     * @param _y1 Lower y
+     * @param _x2 Upper x
+     * @param _y2 Upper y
+     */
     LegendPos(bool _draw, float _x1, float _y1, float _x2, float _y2)
         : draw(_draw), x1(_x1), y1(_y1), x2(_x2), y2(_y2) {}
 
+    /**
+     * Constructor with a JSON configuration
+     *
+     * @param vpos Position configuration object
+     */
     LegendPos(json::Value& vpos);
 
+    /**
+     * Set all parameters.
+     *
+     * @param _draw Draw the legend?
+     * @param _x1 Lower x
+     * @param _y1 Lower y
+     * @param _x2 Upper x
+     * @param _y2 Upper y
+     */
     void set(bool _draw, float _x1, float _y1, float _x2, float _y2);
 
     bool draw;  //!< Draw the legend?

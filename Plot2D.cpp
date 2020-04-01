@@ -8,7 +8,9 @@
 #include "Plot2D.h"
 #include "Generator.h"
 
-Plot2D::Plot2D(json::Value& c) : Plot(c), nrows(1), ncols(1), ymax(-1) {
+Plot2D::Plot2D(json::Value& c)
+    : Plot(c), nrows(1), ncols(1), ymax(-1), subplot_config(json::TObject()) {
+  // Load settings
   nrows = c.getMember("nrows").getInteger();
   ncols = c.getMember("ncols").getInteger();
 
@@ -37,6 +39,7 @@ void Plot2D::draw(std::string filename, TVirtualPad* pad) {
   pad->cd();
   pad->Divide(nrows, ncols, 0, 0);
 
+  // Draw all the subplots
   for (int i=0; i<plots.size(); i++) {
     TVirtualPad* p = pad->cd(i+1);
     if (i > 0) {
@@ -50,6 +53,7 @@ void Plot2D::draw(std::string filename, TVirtualPad* pad) {
     pad->SaveAs(filename.c_str());
   }
 
+  // Delete the canvas if we own it
   if (own_pad) {
     delete pad;
   }

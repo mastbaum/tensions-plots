@@ -9,7 +9,7 @@
  */
 struct Options {
   /** Default ctor. */
-  Options() : valid(true), aflag(0), bflag(0), config(""), nopt(0) {}
+  Options() : valid(true), config(""), nopt(0) {}
 
   /**
    * Constructor with CLI arguments
@@ -20,8 +20,6 @@ struct Options {
   Options(int argc, char* argv[]);
 
   bool valid;  //!< Is this configuration valid?
-  int aflag;
-  int bflag;
   std::string config; //!< Configuration JSON file
   unsigned nopt;  //!< Number of options specified
 };

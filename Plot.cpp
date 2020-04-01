@@ -4,6 +4,7 @@
 #include "Generator.h"
 
 Plot::Plot(json::Value& c) : Plot() {
+  // Load settings
   if (c.isMember("sample")) {
     sample = c.getMember("sample").getString();
   }
@@ -15,6 +16,7 @@ Plot::Plot(json::Value& c) : Plot() {
 
   type = getType(c);
 }
+
 
 Plot::PlotType Plot::getType(json::Value& c) {
   if (!c.isMember("type")) return k1D;

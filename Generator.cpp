@@ -35,11 +35,12 @@ TH1* Generator::getHistogram(std::string key) {
     return nullptr;
   }
 
+  // Get the object as a generic TH1
   tfile->cd();
   TH1* ht = (TH1*) tfile->Get(key.c_str());
   assert(ht);
 
-  // Get the object as a TH(1|2|3)D
+  // Clone the object as a TH(1|2|3)D, for ownership
   TH1* h =  nullptr;;
   if (ht->IsA() == TH1D::Class()) {
     h = (TH1D*) ht->Clone(TString(ht->GetName()) + "_h");
