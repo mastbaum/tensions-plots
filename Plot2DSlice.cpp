@@ -23,10 +23,10 @@ void Plot2DSlice::add(Generator* gen) {
   std::vector<std::string> data_slice_objs;
 
   for (std::string& key : gen->keys) {
-    if (key.starts_with(mc_name) || key.starts_with(mc_name_lower)) {
+    if (key.rfind(mc_name, 0) == 0 || key.rfind(mc_name_lower, 0) == 0) {
       mc_slice_objs.push_back(key);
     }
-    if (key.starts_with(data_name) || key.starts_with(data_name_lower)) {
+    if (key.rfind(data_name, 0) == 0 || key.rfind(data_name_lower, 0) == 0) {
       data_slice_objs.push_back(key);
     }
   }

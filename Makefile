@@ -1,4 +1,4 @@
-CFLAGS=-g -std=c++2a -Werror -pedantic -stdlib=libc++ -lm -ldl -pthread -stdlib=libc++ -m64
+CFLAGS=-g -Werror -pedantic -lm -ldl -m64 -std=c++14
 INCLUDE=-I. -I./contrib/fastjson -I/Users/mastbaum/sw/root-6.14.06/include
 LFLAGS=-L/Users/mastbaum/sw/root-6.14.06/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lpthread
 

@@ -37,7 +37,7 @@ void Plot2D::draw(std::string filename, TVirtualPad* pad) {
   }
 
   pad->cd();
-  pad->Divide(nrows, ncols, 0, 0);
+  pad->Divide(ncols, nrows, 0, 0);
 
   // Draw all the subplots
   for (int i=0; i<plots.size(); i++) {

@@ -55,7 +55,6 @@ void Plot2DProjection::add(Generator* gen) {
   if (!annotate.empty()) {
     assert(nfound == annotate.size());
   }
-
   // Find sample chi2 from NUISANCE
   TH1D* hchi2 = (TH1D*) gen->getHistogram("likelihood_hist");
   assert(hchi2);
