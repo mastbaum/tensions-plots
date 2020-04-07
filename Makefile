@@ -1,6 +1,6 @@
-CFLAGS=-g -Werror -pedantic -lm -ldl -m64 -std=c++14
-INCLUDE=-I. -I./contrib/fastjson -I/Users/mastbaum/sw/root-6.14.06/include
-LFLAGS=-L/Users/mastbaum/sw/root-6.14.06/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lpthread
+CFLAGS=-g -Werror -pedantic $(shell root-config --cflags)
+INCLUDE=-I. -I./contrib/fastjson
+LFLAGS=$(shell root-config --libs)
 
 SOURCES=Generator.cpp Plot.cpp Plot2D.cpp Plot2DSlice.cpp Options.cpp Plot1D.cpp Plot2DProjection.cpp plotter.cpp
 
