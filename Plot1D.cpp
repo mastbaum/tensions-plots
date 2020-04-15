@@ -9,6 +9,7 @@
 #include "Plot.h"
 #include "Plot1D.h"
 #include "Generator.h"
+#include "TPaveText.h"
 
 void Plot1D::AxisRangeX::operator()(TH1D* h) {
   h->GetXaxis()->SetRangeUser(xmin, xmax);
@@ -30,7 +31,7 @@ Plot1D::LegendPos::LegendPos(json::Value& vpos) {
   else if (vpos.getType() == json::TARRAY) {
     // User-specified position
     std::vector<double> lcoord = vpos.toVector<double>();
-    set(true, lcoord[1], lcoord[1], lcoord[2], lcoord[3]);
+    set(true, lcoord[0], lcoord[1], lcoord[2], lcoord[3]);
   }
 }
 
@@ -80,6 +81,7 @@ void Plot1D::add(Generator* gen) {
   // Extract the MC histogram for this generator
   std::string mc = sample + "_MC";
   TH1D* hmc = dynamic_cast<TH1D*>(gen->getHistogram(mc));
+  assert(hmc);
 
   // Build a legend title: name and chi2
   std::string title = gen->title + " (#chi^{2}=" + hmc->GetTitle() + ")";
@@ -94,8 +96,21 @@ void Plot1D::add(Generator* gen) {
       data = sample + "_DATA";
       hdata = dynamic_cast<TH1D*>(gen->getHistogram(data));
     }
-    hdata->SetLineColor(kBlack);
+    if (!hdata) {
+      data = sample;
+      hdata = dynamic_cast<TH1D*>(gen->getHistogram(data));
+    }
     assert(hdata);
+    hdata->SetLineColor(kBlack);
+  }
+}
+
+
+void Plot1D::scale(float factor) {
+  hdata->Scale(factor);
+
+  for (TH1D* line : lines) {
+    line->Scale(factor);
   }
 }
 
@@ -115,17 +130,20 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   pad->cd();
 
   // Draw the data first
-  hdata->GetXaxis()->SetTitleFont(132);
-  hdata->GetXaxis()->SetLabelFont(132);
+  hdata->GetXaxis()->SetTitleFont(133);
+  hdata->GetXaxis()->SetLabelFont(133);
   hdata->GetXaxis()->SetLabelSize(fontsize);
   hdata->GetXaxis()->SetTitleSize(fontsize);
   hdata->GetXaxis()->CenterTitle(false);
 
-  hdata->GetYaxis()->SetTitleFont(132);
-  hdata->GetYaxis()->SetLabelFont(132);
+  hdata->GetYaxis()->SetTitleFont(133);
+  hdata->GetYaxis()->SetLabelFont(133);
   hdata->GetYaxis()->SetLabelSize(fontsize);
   hdata->GetYaxis()->SetTitleSize(fontsize);
   hdata->GetYaxis()->CenterTitle(false);
+  if (type == k1D) {
+    hdata->GetYaxis()->SetTitleOffset(2.0);
+  }
 
   if (xtitle != "") hdata->GetXaxis()->SetTitle(xtitle.c_str());
   if (ytitle != "") hdata->GetYaxis()->SetTitle(ytitle.c_str());
@@ -164,11 +182,22 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   }
 
   // Add annotation label, if any
-  TLatex* tla = nullptr;
+  TPaveText* tla = nullptr;
   if (!annotate.empty()) {
-    tla = new TLatex;
-    tla->SetTextFont(132);
-    tla->DrawLatexNDC(0.5, 0.9, annotate.c_str());
+    tla = new TPaveText(0.5, 0.8, 0.9, 0.99, "NDC");
+    tla->SetTextAlign(33);
+    tla->SetTextFont(133);
+    tla->SetTextSize(fontsize);
+    tla->SetBorderSize(0);
+    tla->SetFillColor(0);
+
+    std::stringstream ss(annotate);
+    std::string s;
+    while (getline(ss, s, ';')) {
+      tla->AddText(s.c_str());
+    }
+
+    tla->Draw();
   }
 
   pad->Update();

@@ -9,12 +9,17 @@ Plot::Plot(json::Value& c) : Plot() {
     sample = c.getMember("sample").getString();
   }
 
-  fontsize = 0.05;
-  if (c.isMember("fontsize")) {
-    fontsize = c.getMember("fontsize").getReal();
+  scale_factor = 1.0;
+  if (c.isMember("scale")) {
+    scale_factor = c.getMember("scale").getReal();
   }
 
   type = getType(c);
+
+  fontsize = type == k1D ? 15 : 30;
+  if (c.isMember("fontsize")) {
+    fontsize = c.getMember("fontsize").getReal();
+  }
 }
 
 

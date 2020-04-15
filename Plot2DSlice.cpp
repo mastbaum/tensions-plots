@@ -75,6 +75,8 @@ void Plot2DSlice::add(Generator* gen) {
         json::Value va(annotate[i]);
         subplot_config.setMember("annotate", va);
       }
+      json::Value vf(fontsize);
+      subplot_config.setMember("fontsize", vf);
       plots[i] = new Plot1D(subplot_config);
       TH1D* h = (TH1D*) gen->getHistogram(data_slice_objs[i]);
       h->SetLineColor(kBlack);
@@ -82,6 +84,18 @@ void Plot2DSlice::add(Generator* gen) {
       if (ymax > -1) {
         plots[i]->ymax = ymax;
       }
+
+      // Set axis labels automatically
+      if (ylabel.empty()) {
+        ylabel = h->GetYaxis()->GetTitle();
+      }
+      if (xlabel.empty()) {
+        xlabel = h->GetXaxis()->GetTitle();
+      }
+
+      h->GetXaxis()->SetTitle("");
+      h->GetYaxis()->SetTitle("");
+
       plots[i]->hdata = h;
     }
   }

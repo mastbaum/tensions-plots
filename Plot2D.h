@@ -42,7 +42,10 @@ public:
 public:
   unsigned nrows;  //!< Number of plot grid rows
   unsigned ncols;  //!< Number of plot grid columns
+  int legend_pad;  //!< Which pad ID to draw the legend
   float ymax;  //!< Maximum y, -1 for auto scale
+  std::string xlabel;  //!< x axis label
+  std::string ylabel;  //!< y axis label
   std::vector<Plot1D*> plots;  //!< Array of plots for the 2D grid
   Plot1D::LegendPos lloc;  //!< Legend location
   json::Value subplot_config;  //!< Config applied to subplots

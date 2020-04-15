@@ -104,6 +104,13 @@ public:
   void add(Generator* gen);
 
   /**
+   * Scale by a constant.
+   *
+   * @param factor The scale factor
+   */
+  void scale(float factor);
+
+  /**
    * Draw the overlaid histograms.
    *
    * @param filename Output filename for PDF

@@ -71,7 +71,11 @@ int main(int argc, char* argv[]) {
       plot->add(gen);
     }
 
-    plot->draw(plot->sample + ".pdf");
+    std::string proj = "";
+    if (plot->type == Plot::k2DProjection) {
+      proj = ((Plot2DProjection*) plot)->projection == Plot2DProjection::kX ? "_x" : "_y";
+    }
+    plot->draw(plot->sample + proj + ".pdf");
   }
 
   return 0;

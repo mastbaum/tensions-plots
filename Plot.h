@@ -52,6 +52,7 @@ public:
   std::string sample;  //!< NUISANCE sample name
   PlotType type;  //!< Type of plot
   double fontsize;  //!< Label and title size
+  double scale_factor;  //!< Scale factor
 };
 
 #endif  // __plotter_Plot__

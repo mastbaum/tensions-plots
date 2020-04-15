@@ -23,8 +23,10 @@ public:
    */
   void add(Generator* gen);
 
-private:
+public:
   Projection projection;  //!< What projection to use
+
+private:
   int nslices;  //!< Number of subplot slices
 };
 

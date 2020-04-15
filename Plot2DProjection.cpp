@@ -55,6 +55,17 @@ void Plot2DProjection::add(Generator* gen) {
   if (!annotate.empty()) {
     assert(nfound == annotate.size());
   }
+
+  // Set axis labels automatically
+  if (ylabel.empty()) {
+    ylabel = data2d->GetZaxis()->GetTitle();
+  }
+
+  if (xlabel.empty()) {
+    xlabel = (projection == kX ? data2d->GetXaxis()->GetTitle()
+                               : data2d->GetYaxis()->GetTitle());
+  }
+
   // Find sample chi2 from NUISANCE
   TH1D* hchi2 = (TH1D*) gen->getHistogram("likelihood_hist");
   assert(hchi2);
@@ -72,21 +83,42 @@ void Plot2DProjection::add(Generator* gen) {
     plots.resize(nslices);
     for (size_t i=0; i<nslices; i++) {
       if (!annotate.empty()) {
-        json::Value va(annotate[i]);
-        subplot_config.setMember("annotate", va);
+        subplot_config.setMember("annotate", json::Value(annotate[i]));
       }
+      subplot_config.setMember("fontsize", json::Value(fontsize));
       plots[i] = new Plot1D(subplot_config);
 
-      std::string name = Form("%s_slice_%lu_h", data2d->GetName(), i);
+      std::string proj = (projection == kX ? "x" : "y");
+      std::string name = Form("%s_slice_%lu_%s_h", data2d->GetName(), i, proj.c_str());
 
       TH1D* h;
       if (projection == kX) {
         h = (TH1D*) data2d->ProjectionX(name.c_str(), i+1, i+1);
+
+        if (annotate.empty()) {
+          std::string xtitle = data2d->GetYaxis()->GetTitle();
+          float xlo = data2d->GetYaxis()->GetBinLowEdge(i+1);
+          float xwd = data2d->GetYaxis()->GetBinWidth(i+1);
+          float xhi = xlo + xwd;
+          std::string label = Form("%1.2f < %s < %1.2f", xlo, xtitle.c_str(), xhi);
+          plots[i]->annotate = label;
+        }
       }
       else {
         h = (TH1D*) data2d->ProjectionY(name.c_str(), i+1, i+1);
+
+        if (annotate.empty()) {
+          std::string xtitle = data2d->GetXaxis()->GetTitle();
+          float xlo = data2d->GetXaxis()->GetBinLowEdge(i+1);
+          float xwd = data2d->GetXaxis()->GetBinWidth(i+1);
+          float xhi = xlo + xwd;
+          std::string label = Form("%1.2f < %s < %1.2f", xlo, xtitle.c_str(), xhi);
+          plots[i]->annotate = label;
+        }
       }
 
+      h->GetXaxis()->SetTitle("");
+      h->GetYaxis()->SetTitle("");
       h->SetLineColor(kBlack);
       h->SetLineWidth(1);
       if (ymax > -1) {
