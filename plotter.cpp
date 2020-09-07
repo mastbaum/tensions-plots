@@ -75,6 +75,7 @@ int main(int argc, char* argv[]) {
     if (plot->type == Plot::k2DProjection) {
       proj = ((Plot2DProjection*) plot)->projection == Plot2DProjection::kX ? "_x" : "_y";
     }
+    plot->draw(plot->sample + proj + ".C");
     plot->draw(plot->sample + proj + ".pdf");
   }
 

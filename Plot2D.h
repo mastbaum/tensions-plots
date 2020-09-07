@@ -44,6 +44,7 @@ public:
   unsigned ncols;  //!< Number of plot grid columns
   int legend_pad;  //!< Which pad ID to draw the legend
   float ymax;  //!< Maximum y, -1 for auto scale
+  bool panels;  //!< Draw panes apart
   std::string xlabel;  //!< x axis label
   std::string ylabel;  //!< y axis label
   std::vector<Plot1D*> plots;  //!< Array of plots for the 2D grid
