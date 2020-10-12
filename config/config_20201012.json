@@ -1,0 +1,429 @@
+{
+  "generators": [
+    {
+      "filename" : "/PATH/TO/nuiscomp_genie_g1802a0211a.root",
+      "title": "GENIE G1802a0211a",
+      "color": 600
+    },
+    {
+      "filename" : "/PATH/TO/nuiscomp_genie_g1810a0211a.root",
+      "title": "GENIE G1810a0211a",
+      "color": 417
+    },
+    {
+      "filename" : "/PATH/TO/nuiscomp_genie_g1810b0211a.root",
+      "title": "GENIE G1810b0211a",
+      "color": 633
+    },
+    {
+      "filename" : "/PATH/TO/nuiscomp_nuwro.root",
+      "title": "NuWro 19.02.1",
+      "color": 800
+    },
+    {
+      "filename" : "/PATH/TO/nuiscomp_neut.root",
+      "title": "NEUT 5.4.0",
+      "color": 880
+    }
+  ],
+
+  "plots": [
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpmu_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtCH_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1Dpt_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1Dpz_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DQ2QE_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DEnuQE_nu",
+      "legend_pos": "LR"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpmu_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dthmu_nu",
+      "legend_pos": "LC"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpprot_nu",
+      "legend_pos": "LL"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dthprot_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpnreco_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddalphat_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddpt_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddphit_nu"
+    },
+    {
+      "sample": "MINERvA_CCQE_XSec_1DQ2_nu"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_20deg"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_fluxcorr"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_20deg_fluxcorr"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_20deg"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_fluxcorr"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_20deg_fluxcorr"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_2017"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_2017"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dpmu_nu_2017"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1Dthmu_nu_2017",
+      "legend_pos": "LC"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DQ2_nu_2017"
+    },
+    {
+      "sample": "MINERvA_CC1pip_XSec_1DEnu_nu_2017",
+      "legend_pos": "LC"
+    },
+    {
+      "sample": "T2K_CC0pinp_STV_XSec_1Ddpt_nu"
+    },
+    {
+      "sample": "T2K_CC0pinp_STV_XSec_1Ddphit_nu"
+    },
+    {
+      "sample": "T2K_CC0pinp_STV_XSec_1Ddat_nu",
+      "legend_pos": "LC"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_2Dpmucosmu_nu"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1Dppi_nu",
+      "xrange": [0, 3]
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1Dthpi_nu"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1Dthmupi_nu"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1DQ2_nu"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1DAdlerPhi_nu",
+      "legend_pos": "LL"
+    },
+    {
+      "sample": "T2K_CC1pip_CH_XSec_1DCosThAdler_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "type": "2DSlice",
+      "sample": "MicroBooNE_CCInc_XSec_2DPcos_nu",
+      "nrows": 3,
+      "ncols": 3,
+      "xlabel": "p_{#mu}^{reco} [GeV]",
+      "ylabel": "#frac{d^{2}#sigma}{dp_{#mu}^{reco}dcos(#theta_{#mu}^{reco})} [10^{-38} cm^{2}/GeV/n]",
+      "scale": 1e38,
+      "subplot": {
+        "legend_pos": [0.4, 0.25, 0.95, 0.75]
+      },
+      "annotate": [
+        "-1.00 < cos(#theta_{#mu}^{reco}) < -0.50",
+        "-0.50 < cos(#theta_{#mu}^{reco}) < -0.00",
+        "0.00 < cos(#theta_{#mu}^{reco}) < 0.27",
+        "0.27 < cos(#theta_{#mu}^{reco}) < 0.45",
+        "0.45 < cos(#theta_{#mu}^{reco}) < 0.62",
+        "0.62 < cos(#theta_{#mu}^{reco}) < 0.76",
+        "0.76 < cos(#theta_{#mu}^{reco}) < 0.86",
+        "0.86 < cos(#theta_{#mu}^{reco}) < 0.94",
+        "0.94 < cos(#theta_{#mu}^{reco}) < 1.00"
+      ]
+    },
+    {
+      "type": "2DProjection",
+      "sample": "MINERvA_CCinc_XSec_2DEavq3_nu",
+      "nrows": 4,
+      "ncols": 4,
+      "projection": "x",
+      "ylabel": "#frac{d^{2}#sigma}{dE_{avail}dq_{3}} [10^{-38} cm^{2}/GeV^{2}]",
+      "scale": 1e38,
+      "legend_pad": 16,
+      "subplot": {
+        "legend_pos": [0.1, 0.35, 0.65, 0.75]
+      }
+    },
+    {
+      "type": "2DProjection",
+      "sample": "MINERvA_CCinc_XSec_2DEavq3_nu",
+      "nrows": 2,
+      "ncols": 3,
+      "projection": "y",
+      "ylabel": "#frac{d^{2}#sigma}{dE_{avail}dq_{3}} [10^{-38} cm^{2}/GeV^{2}]",
+      "scale": 1e38,
+      "subplot": {
+        "legend_pos": [0.5, 0.35, 0.95, 0.75],
+        "xrange": [0, 0.5]
+      }
+    },
+    {
+      "type": "2DSlice",
+      "sample": "T2K_CC1pip_CH_XSec_2Dpmucosmu_nu",
+      "nrows": 2,
+      "ncols": 2,
+      "projection": "y",
+      "xlabel": "E_{avail} [GeV]",
+      "ylabel": "#frac{d^{2}#sigma}{dE_{avail}dq_{3}} [10^{-38} cm^{2}/GeV^{2}]",
+      "subplot": {
+        "xrange": [0, 2],
+        "legend_pos": [0.5, 0.35, 0.95, 0.57]
+      },
+      "scale": 1e38,
+      "annotate": [
+        "0.00 < cos#theta_{#mu} < 0.80",
+        "0.80 < cos#theta_{#mu} < 0.85",
+        "0.85 < cos#theta_{#mu} < 0.90",
+        "0.90 < cos#theta_{#mu} < 1.00"
+      ]
+    },
+    {
+      "type": "2DProjection",
+      "sample": "MINERvA_CC0pi_XSec_2Dptpz_nu",
+      "projection": "y",
+      "nrows": 3,
+      "ncols": 4,
+      "scale": 1e38,
+      "ylabel": "d^{2}#sigma_{QELike}/dp_{||}dp_{t} (10^{-38} cm^{2}/GeV^{2}/^{12}C)",
+      "subplot": {
+        "legend_pos": [0.45, 0.25, 0.98, 0.75]
+      }
+    },
+    {
+      "type": "2DProjection",
+      "sample": "MINERvA_CC0pi_XSec_2Dptpz_nu",
+      "projection": "x",
+      "nrows": 3,
+      "ncols": 5,
+      "scale": 1e38,
+      "ylabel": "d^{2}#sigma_{QELike}/dp_{||}dp_{t} (10^{-38} cm^{2}/GeV^{2}/^{12}C)",
+      "subplot": {
+        "legend_pos": [0.4, 0.25, 0.98, 0.75]
+      }
+    },
+
+    {
+      "sample": "MiniBooNE_CCQE_XSec_1DQ2_nu"
+    },
+    {
+      "sample": "MiniBooNE_CCQELike_XSec_1DQ2_nu"
+    },
+    {
+      "sample": "MiniBooNE_CCQE_XSec_1DEnu_nu",
+      "legend_pos": "LR"
+    },
+    {
+      "sample": "MiniBooNE_CCQELike_XSec_1DEnu_nu",
+      "legend_pos": "LR"
+    },
+    {
+      "sample": "MiniBooNE_CCQE_XSec_2DTcos_nu",
+      "type": "2DProjection",
+      "nrows": 3,
+      "ncols": 6,
+      "ylabel": "d^{2}#sigma/dT_{#mu}dcos#theta_{#mu} [10^{-38} cm^{2}/GeV]",
+      "projection": "y",
+      "scale": 1e38,
+      "legend_pad": 18,
+      "fontsize": 25.0,
+      "subplot": {
+        "legend_pos": [0.1, 0.2, 0.8, 0.55]
+      }
+    },
+    {
+      "sample": "MiniBooNE_CCQELike_XSec_2DTcos_nu",
+      "type": "2DProjection",
+      "nrows": 3,
+      "ncols": 6,
+      "projection": "y",
+      "fontsize": 25.0,
+      "scale": 1e38,
+      "legend_pad": 18,
+      "ylabel": "d^{2}#sigma/dT_{#mu}dcos#theta_{#mu} [10^{-38} cm^{2}/GeV]",
+      "subplot": {
+        "legend_pos": [0.1, 0.2, 0.8, 0.55]
+      }
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_1DEnu_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_1DQ2_nu"
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_1DTpi_nu"
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_1DTu_nu"
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_2DQ2Enu_nu",
+      "type": "2DProjection",
+      "nrows": 5,
+      "ncols": 5,
+      "projection": "y",
+      "fontsize": 25.0,
+      "scale": 1e38,
+      "ylabel": "d#sigma/dQ^{2} [10^{-38} cm^{2}/(MeV^{2}/c^{4})/CH_{2}]",
+      "subplot": {
+        "legend_pos": "LR"
+      }
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_2DTpiCospi_nu",
+      "type": "2DProjection",
+      "nrows": 2,
+      "ncols": 5,
+      "projection": "y",
+      "fontsize": 25.0,
+      "scale": 1e38,
+      "ylabel": "d^{2}#sigma/dT_{#pi}dcos#theta_{#pi} [10^{-38} cm^{2}/MeV]",
+      "legend_pad": 10,
+      "subplot": {
+        "legend_pos": [0.1, 0.3, 0.7, 0.75]
+      }
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_2DTpiEnu_nu",
+      "type": "2DProjection",
+      "nrows": 5,
+      "ncols": 5,
+      "projection": "y",
+      "fontsize": 25.0,
+      "scale": 1e38,
+      "ylabel": "d#sigma/dT_{#pi} [10^{-38} cm^{2}/MeV]",
+      "subplot": {
+        "legend_pos": [0.6, 0.5, 0.99, 0.75]
+      }
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_2DTuCosmu_nu",
+      "type": "2DProjection",
+      "nrows": 4,
+      "ncols": 5,
+      "projection": "y",
+      "fontsize": 25.0,
+      "scale": 1e38,
+      "ylabel": "d^{2}#sigma/dT_{#mu}dcos#theta_{#mu} [10^{-38} cm^{2}/MeV]",
+      "legend_pad": 20,
+      "subplot": {
+        "legend_pos": [0.1, 0.25, 0.8, 0.55]
+      }
+    },
+    {
+      "sample": "MiniBooNE_CC1pip_XSec_2DTuEnu_nu",
+      "type": "2DProjection",
+      "nrows": 4,
+      "ncols": 6,
+      "projection": "y",
+      "fontsize": 20.0,
+      "scale": 1e38,
+      "ylabel": "d#sigma/dT_{#mu} [10^{-38} cm^{2}/MeV]",
+      "subplot": {
+        "legend_pos": [0.45, 0.25, 0.95, 0.65]
+      }
+    },
+    {
+      "sample": "MiniBooNE_CC1pi0_XSec_1DEnu_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MiniBooNE_CC1pi0_XSec_1DQ2_nu"
+    },
+    {
+      "sample": "MiniBooNE_CC1pi0_XSec_1DTu_nu"
+    },
+    {
+      "sample": "MiniBooNE_CC1pi0_XSec_1Dcosmu_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MiniBooNE_CC1pi0_XSec_1Dcospi0_nu",
+      "legend_pos": "UL"
+    },
+    {
+      "sample": "MiniBooNE_CC1pi0_XSec_1Dppi0_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtFe_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtRatioFe_nu"
+    },
+    {
+      "sample": "MINERvA_CCinc_XSec_1Dx_ratio_Fe56_CH",
+      "legend_pos": "LL"
+
+    },
+    {
+      "sample": "MINERvA_CCinc_XSec_1DEnu_ratio_Fe56_CH",
+      "legend_pos": "LL"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtPb_nu"
+    },
+    {
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtRatioPb_nu"
+    },
+    {
+      "sample": "MINERvA_CCinc_XSec_1Dx_ratio_Pb208_CH",
+      "legend_pos": "LL"
+
+    },
+    {
+      "sample": "MINERvA_CCinc_XSec_1DEnu_ratio_Pb208_CH",
+      "legend_pos": "LL"
+
+    }
+  ]
+}
+

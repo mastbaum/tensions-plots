@@ -77,6 +77,7 @@ int main(int argc, char* argv[]) {
     }
     plot->draw(plot->sample + proj + ".C");
     plot->draw(plot->sample + proj + ".pdf");
+    plot->draw(plot->sample + proj + ".C");
   }
 
   return 0;
