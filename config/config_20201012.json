@@ -211,8 +211,8 @@
       "nrows": 2,
       "ncols": 2,
       "projection": "y",
-      "xlabel": "E_{avail} [GeV]",
-      "ylabel": "#frac{d^{2}#sigma}{dE_{avail}dq_{3}} [10^{-38} cm^{2}/GeV^{2}]",
+      "xlabel": "p_{#mu} [GeV/c]",
+      "ylabel": "#frac{d^{2}#sigma}{dp_{#mu}dcos_{#theta_{#mu}}} [10^{-38} cm^{2}/(GeV/c)]",
       "subplot": {
         "xrange": [0, 2],
         "legend_pos": [0.5, 0.35, 0.95, 0.57]
