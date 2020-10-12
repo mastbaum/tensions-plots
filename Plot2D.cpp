@@ -36,11 +36,6 @@ Plot2D::Plot2D(json::Value& c)
   if (c.isMember("annotate")) {
     annotate = c.getMember("annotate").toVector<std::string>();
   }
-
-  panels = false;
-  //if (c.isMember("panels")) {
-  //  panels = c.getMember("panels").getBool();
-  //}
 }
 
 
@@ -50,27 +45,16 @@ void Plot2D::draw(std::string filename, TVirtualPad* pad) {
   if (!pad) {
     pad = new TCanvas("c", "", 2000, 1500);
     assert(pad);
+    pad->SetLeftMargin(0.22);
     pad->SetTopMargin(0.18);
+    pad->SetBottomMargin(0.18);
     pad->SetFillStyle(4000);
     pad->SetFrameFillStyle(0);
     own_pad = true;
   }
 
   pad->cd();
-  if (panels) {
-    pad->Divide(ncols, nrows);
-    if (own_pad) {
-      pad->SetLeftMargin(0.25);
-      pad->SetBottomMargin(0.20);
-    }
-  }
-  else {
-    pad->Divide(ncols, nrows, 0, 0);
-    if (own_pad) {
-      pad->SetLeftMargin(0.22);
-      pad->SetBottomMargin(0.18);
-    }
-  }
+  pad->Divide(ncols, nrows, 0, 0);
 
   // Scale
   for (auto plot : plots) {
@@ -146,7 +130,8 @@ void Plot2D::draw(std::string filename, TVirtualPad* pad) {
 
   // Save the final canvas
   if (filename != "") {
-    pad->SaveAs(filename.c_str());
+    pad->SaveAs((filename + ".pdf").c_str());
+    pad->SaveAs((filename + ".C").c_str());
   }
 
   // Delete the canvas if we own it

@@ -204,7 +204,8 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
 
   // Save the final canvas
   if (filename != "") {
-    pad->SaveAs(filename.c_str());
+    pad->SaveAs((filename + ".pdf").c_str());
+    pad->SaveAs((filename + ".C").c_str());
   }
 
   // Delete the TCanvas if we own it
