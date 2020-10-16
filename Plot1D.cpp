@@ -70,6 +70,13 @@ Plot1D::Plot1D(json::Value& c)
     annotate = c.getMember("annotate").getString();
   }
 
+  if (c.isMember("data_label")) {
+    data_label = c.getMember("data_label").getString();
+  }
+  else {
+    data_label = "Data";
+  }
+
   if (c.isMember("legend_pos")) {
     json::Value& vpos = c.getMember("legend_pos");
     lloc = LegendPos(vpos);
@@ -177,6 +184,7 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   // Redraw the data on top
   hdata->Draw("e1 same");
   hdata->GetYaxis()->SetRangeUser(0, ymax);
+  l->AddEntry(hdata, data_label.c_str());
   if (lloc.draw) {
     l->Draw();
   }

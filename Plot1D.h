@@ -125,6 +125,7 @@ public:
   std::string xtitle;  //!< Override x title
   std::string ytitle;  //!< Override y title
   std::string annotate;  //!< Annotation
+  std::string data_label;  //!< Data label for legend
 
 private:
   AxisRangeX* xranger;  //!< Axis range adjuster

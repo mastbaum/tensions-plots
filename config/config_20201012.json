@@ -29,7 +29,8 @@
 
   "plots": [
     {
-      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpmu_nu"
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpmu_nu",
+      "data_label": "MINERvA Data"
     },
     {
       "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtCH_nu"
