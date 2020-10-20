@@ -20,12 +20,12 @@ Plot1D::LegendPos::LegendPos(json::Value& vpos) {
   if (vpos.getType() == json::TSTRING) {
     // Use a pre-defined position
     std::string spos = vpos.getString();
-    if      (spos == "UL") set( true, 0.18, 0.65, 0.51, 0.85);
-    else if (spos == "UC") set( true, 0.33, 0.65, 0.66, 0.85);
-    else if (spos == "LL") set( true, 0.18, 0.15, 0.51, 0.35);
-    else if (spos == "LC") set( true, 0.33, 0.15, 0.66, 0.35);
-    else if (spos == "LR") set( true, 0.50, 0.15, 0.88, 0.35);
-    else if (spos == "UR") set( true, 0.50, 0.65, 0.88, 0.85);
+    if      (spos == "UL") set( true, 0.19, 0.65, 0.70, 0.85);
+    else if (spos == "UC") set( true, 0.25, 0.65, 0.75, 0.85);
+    else if (spos == "LL") set( true, 0.19, 0.18, 0.70, 0.41);
+    else if (spos == "LC") set( true, 0.25, 0.18, 0.75, 0.41);
+    else if (spos == "LR") set( true, 0.40, 0.18, 0.89, 0.41);
+    else if (spos == "UR") set( true, 0.40, 0.65, 0.89, 0.85);
     else                   set(false, 0.00, 0.00, 0.00, 0.00);
   }
   else if (vpos.getType() == json::TARRAY) {
@@ -128,28 +128,34 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   if (!pad) {
     pad = new TCanvas("c", "", 500, 500);
     assert(pad);
-    pad->SetLeftMargin(0.14);
+    pad->SetLeftMargin(0.18);
     pad->SetTopMargin(0.12);
-    pad->SetBottomMargin(0.12);
+    pad->SetBottomMargin(0.15);
     own_pad = true;
   }
 
   pad->cd();
 
   // Draw the data first
+  hdata->SetMarkerStyle(20);
+  hdata->SetMarkerSize(1);
+  hdata->SetMarkerColor(kBlack);
+
   hdata->GetXaxis()->SetTitleFont(133);
   hdata->GetXaxis()->SetLabelFont(133);
   hdata->GetXaxis()->SetLabelSize(fontsize);
   hdata->GetXaxis()->SetTitleSize(fontsize);
+  hdata->GetXaxis()->SetNdivisions(505);
   hdata->GetXaxis()->CenterTitle(false);
 
   hdata->GetYaxis()->SetTitleFont(133);
   hdata->GetYaxis()->SetLabelFont(133);
   hdata->GetYaxis()->SetLabelSize(fontsize);
   hdata->GetYaxis()->SetTitleSize(fontsize);
+  hdata->GetYaxis()->SetNdivisions(505);
   hdata->GetYaxis()->CenterTitle(false);
   if (type == k1D) {
-    hdata->GetYaxis()->SetTitleOffset(2.0);
+    hdata->GetYaxis()->SetTitleOffset(1.2);
   }
 
   if (xtitle != "") hdata->GetXaxis()->SetTitle(xtitle.c_str());
@@ -170,6 +176,10 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   // Set the legend position
   TLegend* l = new TLegend(lloc.x1, lloc.y1, lloc.x2, lloc.y2);
 
+  // Draw legend for data
+  l->SetLineWidth(0);
+  l->AddEntry(hdata, data_label.c_str());
+
   // Draw all the MC histograms
   for (TH1D* line : lines) {
     line->Draw("hist same");
@@ -184,7 +194,6 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   // Redraw the data on top
   hdata->Draw("e1 same");
   hdata->GetYaxis()->SetRangeUser(0, ymax);
-  l->AddEntry(hdata, data_label.c_str());
   if (lloc.draw) {
     l->Draw();
   }
