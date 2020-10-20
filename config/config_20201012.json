@@ -1,27 +1,31 @@
 {
   "generators": [
     {
-      "filename" : "/PATH/TO/nuiscomp_genie_g1802a0211a.root",
+      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/genie/nuiscomp_genie_g1810b0211a_20200907.root",
       "title": "GENIE G1802a0211a",
       "color": 600
     },
     {
-      "filename" : "/PATH/TO/nuiscomp_genie_g1810a0211a.root",
+//      "filename" : "/PATH/TO/nuiscomp_genie_g1810a0211a.root",
+      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/nuwro/nuiscomp_nuwro_20200907.root",
       "title": "GENIE G1810a0211a",
       "color": 417
     },
     {
-      "filename" : "/PATH/TO/nuiscomp_genie_g1810b0211a.root",
+//      "filename" : "/PATH/TO/nuiscomp_genie_g1810b0211a.root",
+      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/neut/nuiscomp_neut_20200907.root",
       "title": "GENIE G1810b0211a",
       "color": 633
     },
     {
-      "filename" : "/PATH/TO/nuiscomp_nuwro.root",
+//      "filename" : "/PATH/TO/nuiscomp_nuwro.root",
+      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/nuwro/nuiscomp_nuwro_20200907.root",
       "title": "NuWro 19.02.1",
       "color": 800
     },
     {
-      "filename" : "/PATH/TO/nuiscomp_neut.root",
+//      "filename" : "/PATH/TO/nuiscomp_neut.root",
+      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/neut/nuiscomp_neut_20200907.root",
       "title": "NEUT 5.4.0",
       "color": 880
     }
@@ -33,128 +37,220 @@
       "data_label": "MINERvA Data"
     },
     {
-      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtCH_nu"
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtCH_nu",
+       "data_label": "MINERvA Data"
     },
     {
-      "sample": "MINERvA_CC0pi_XSec_1Dpt_nu"
+      "sample": "MINERvA_CC0pi_XSec_1Dpt_nu",
+       "data_label": "MINERvA Data"
     },
     {
-      "sample": "MINERvA_CC0pi_XSec_1Dpz_nu"
+      "sample": "MINERvA_CC0pi_XSec_1Dpz_nu",
+       "data_label": "MINERvA Data"
     },
     {
-      "sample": "MINERvA_CC0pi_XSec_1DQ2QE_nu"
+      "sample": "MINERvA_CC0pi_XSec_1DQ2QE_nu",
+       "data_label": "MINERvA Data"
     },
     {
       "sample": "MINERvA_CC0pi_XSec_1DEnuQE_nu",
+      "data_label": "MINERvA Data",
       "legend_pos": "LR"
     },
     {
-      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpmu_nu"
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpmu_nu",
+       "data_label": "MINERvA Data"
     },
     {
       "sample": "MINERvA_CC0pinp_STV_XSec_1Dthmu_nu",
-      "legend_pos": "LC"
+       "data_label": "MINERvA Data",
+      "legend_pos": "UL",
+      "ymax": 0.25e-39,
+      "xtitle": "#theta_{#mu} (deg)",
+      "ytitle": "d#sigma/d#theta_{#mu} (cm^{2}/deg)"
     },
     {
       "sample": "MINERvA_CC0pinp_STV_XSec_1Dpprot_nu",
+      "data_label": "MINERvA Data",
       "legend_pos": "LL"
     },
     {
       "sample": "MINERvA_CC0pinp_STV_XSec_1Dthprot_nu",
+      "data_label": "MINERvA Data",
       "legend_pos": "UL"
     },
     {
-      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpnreco_nu"
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Dpnreco_nu",
+      "data_label": "MINERvA Data"
     },
     {
       "sample": "MINERvA_CC0pinp_STV_XSec_1Ddalphat_nu",
+      "data_label": "MINERvA Data",
       "legend_pos": "UL"
     },
     {
-      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddpt_nu"
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddpt_nu",
+      "data_label": "MINERvA Data"
     },
     {
-      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddphit_nu"
+      "sample": "MINERvA_CC0pinp_STV_XSec_1Ddphit_nu",
+      "data_label": "MINERvA Data"
     },
     {
-      "sample": "MINERvA_CCQE_XSec_1DQ2_nu"
+      "sample": "MINERvA_CCQE_XSec_1DQ2_nu",
+      "data_label": "MINERvA Data"
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu"
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu",
+      "data_label": "MINERvA Data",
+      "ymax": 18e-42,
+      "xtitle": "T_{#pi^{#pm}} (GeV)",
+      "ytitle": "d#sigma/dT_{#pi^{#pm}} (cm^{2}/GeV/nucleon)"
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_20deg"
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_20deg",
+      "data_label": "MINERvA Data",
+      "ymax": 18e-42,
+      "xtitle": "T_{#pi^{#pm}} (GeV)",
+      "ytitle": "d#sigma/dT_{#pi^{#pm}} (cm^{2}/GeV/nucleon)"
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_fluxcorr"
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_fluxcorr",
+      "data_label": "MINERvA Data",
+      "ymax": 18e-42,
+      "xtitle": "T_{#pi^{#pm}} (GeV)",
+      "ytitle": "d#sigma/dT_{#pi^{#pm}} (cm^{2}/GeV/nucleon)"
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_20deg_fluxcorr"
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_20deg_fluxcorr",
+      "data_label": "MINERvA Data",
+      "ymax": 15e-42,
+      "xtitle": "T_{#pi^{#pm}} (GeV)",
+      "ytitle": "d#sigma/dT_{#pi^{#pm}} (cm^{2}/GeV/nucleon)",
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1Dth_nu"
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu",
+      "data_label": "MINERvA Data",
+      "ymax": 55e-42,
+      "xtitle": "#theta_{#pi^{#pm}} (deg)",
+      "ytitle": "d#sigma/d#theta_{#pi^{#pm}} (cm^{2}/deg/nucleon)",
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_20deg"
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_20deg",
+      "data_label": "MINERvA Data",
+      "xtitle": "#theta_{#pi^{#pm}} (deg)",
+      "ytitle": "d#sigma/d#theta_{#pi^{#pm}} (cm^{2}/deg/nucleon)",
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_fluxcorr"
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_fluxcorr",
+      "data_label": "MINERvA Data",
+      "xtitle": "#theta_{#pi^{#pm}} (deg)",
+      "ytitle": "d#sigma/d#theta_{#pi^{#pm}} (cm^{2}/deg/nucleon)",
+      "ymax": 65e-42
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_20deg_fluxcorr"
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_20deg_fluxcorr",
+      "data_label": "MINERvA Data",
+      "ymax": 40e-42,
+      "xtitle": "#theta_{#pi^{#pm}} (deg)",
+      "ytitle": "d#sigma/d#theta_{#pi^{#pm}} (cm^{2}/deg/nucleon)",
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_2017"
+      "sample": "MINERvA_CC1pip_XSec_1DTpi_nu_2017",
+      "data_label": "MINERvA Data",
+      "ymax": 20e-42,
+      "xtitle": "T_{#pi^{#pm}} (deg)",
+      "ytitle": "d#sigma/dT_{#pi^{#pm}} (cm^{2}/GeV/nucleon)",
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_2017"
+      "sample": "MINERvA_CC1pip_XSec_1Dth_nu_2017",
+      "data_label": "MINERvA Data",
+      "xtitle": "#theta_{#pi^{#pm}} (deg)",
+      "ytitle": "d#sigma/d#theta_{#pi^{#pm}} (cm^{2}/deg/nucleon)",
+      "ymax": 60e-42
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1Dpmu_nu_2017"
+      "sample": "MINERvA_CC1pip_XSec_1Dpmu_nu_2017",
+      "data_label": "MINERvA Data",
+      "xtitle": "p_{#mu} (GeV/c)",
+      "ytitle": "d#sigma/dp_{#mu} (cm^{2}/(GeV/c)/nucleon"
     },
     {
       "sample": "MINERvA_CC1pip_XSec_1Dthmu_nu_2017",
+      "data_label": "MINERvA Data",
+      "xtitle": "#theta_{#pi^{#pm}} (deg)",
+      "ytitle": "d#sigma/d#theta_{#pi^{#pm}} (cm^{2}/deg/nucleon)",
       "legend_pos": "LC"
     },
     {
-      "sample": "MINERvA_CC1pip_XSec_1DQ2_nu_2017"
+      "sample": "MINERvA_CC1pip_XSec_1DQ2_nu_2017",
+      "data_label": "MINERvA Data",
+      "xtitle": "Q^{2} (GeV/c)^{2}",
+      "ytitle": "d#sigma/Q^{2} (cm^{2}/(GeV/c)^2/nucleon)"
     },
     {
       "sample": "MINERvA_CC1pip_XSec_1DEnu_nu_2017",
-      "legend_pos": "LC"
+      "data_label": "MINERvA Data",
+      "xtitle": "E_{#nu} (GeV)",
+      "ytitle": "d#sigma/dE_{#nu}/nucleon (cm^{2}/GeV)",
+      "ymax": 0.25e-39
     },
     {
-      "sample": "T2K_CC0pinp_STV_XSec_1Ddpt_nu"
+      "sample": "T2K_CC0pinp_STV_XSec_1Ddpt_nu",
+      "data_label": "T2K Data",
+      "ytitle": "d#sigma/d#delta#it{p}_{T} (cm^{2}/nucleon/GeV/c) ",
+      "xtitle": "#delta#it{p}_{T} (GeV/c)"
     },
     {
-      "sample": "T2K_CC0pinp_STV_XSec_1Ddphit_nu"
+      "sample": "T2K_CC0pinp_STV_XSec_1Ddphit_nu",
+      "data_label": "T2K Data",
+      "ytitle": "d#sigma/d#delta#it{#phi}_{T} (cm^{2}/nucleon/rad) ",
+      "xtitle": "#delta#it{#phi}_{T} (rad)"
     },
     {
       "sample": "T2K_CC0pinp_STV_XSec_1Ddat_nu",
-      "legend_pos": "LC"
+      "data_label": "T2K Data",
+      "legend_pos": "LR",
+      "ytitle": "d#sigma/d#delta#it{#alpha}_{T} (cm^{2}/nucleon/rad) ",
+      "xtitle": "#delta#it{#alpha}_{T} (rad)"
     },
     {
       "sample": "T2K_CC1pip_CH_XSec_2Dpmucosmu_nu"
     },
     {
       "sample": "T2K_CC1pip_CH_XSec_1Dppi_nu",
+      "data_label": "T2K Data",
       "xrange": [0, 3]
     },
     {
-      "sample": "T2K_CC1pip_CH_XSec_1Dthpi_nu"
+      "sample": "T2K_CC1pip_CH_XSec_1Dthpi_nu",
+      "ymax": 0.75e-39,
+      "data_label": "T2K Data"
     },
     {
-      "sample": "T2K_CC1pip_CH_XSec_1Dthmupi_nu"
+      "sample": "T2K_CC1pip_CH_XSec_1Dthmupi_nu",
+      "ymax": 0.68e-39,
+      "data_label": "T2K Data"
     },
     {
-      "sample": "T2K_CC1pip_CH_XSec_1DQ2_nu"
+      "sample": "T2K_CC1pip_CH_XSec_1DQ2_nu",
+      "data_label": "T2K Data",
+      "ymax": 1e-39,
+      "ytitle": "d#sigma/dQ^{2} (cm^{2}/(GeV/c)^{2}) ",
+      "xtitle": "Q^{2} (GeV/c)^{2}"
     },
     {
       "sample": "T2K_CC1pip_CH_XSec_1DAdlerPhi_nu",
+      "data_label": "T2K Data",
+      "ytitle": "d#sigma/d#phi_{Adler} (cm^{2}/rad/nucleon) ",
+      "xtitle": "#phi_{Adler} (rad)",
       "legend_pos": "LL"
     },
     {
       "sample": "T2K_CC1pip_CH_XSec_1DCosThAdler_nu",
+      "data_label": "T2K Data",
+      "ytitle": "d#sigma/dcos#theta_{Adler}/nucleon (cm^{2}) ",
+      "xtitle": "cos#theta_{Adler} ",
       "legend_pos": "UL"
     },
     {
@@ -163,9 +259,10 @@
       "nrows": 3,
       "ncols": 3,
       "xlabel": "p_{#mu}^{reco} [GeV]",
-      "ylabel": "#frac{d^{2}#sigma}{dp_{#mu}^{reco}dcos(#theta_{#mu}^{reco})} [10^{-38} cm^{2}/GeV/n]",
+      "ylabel": "#frac{d^{2}#sigma}{dp_{#mu}^{reco}dcos(#theta_{#mu}^{reco})} [10^{-38} cm^{2}/GeV/c]",
       "scale": 1e38,
       "subplot": {
+        "data_label": "MicroBooNE Data",
         "legend_pos": [0.4, 0.25, 0.95, 0.75]
       },
       "annotate": [
@@ -190,6 +287,7 @@
       "scale": 1e38,
       "legend_pad": 16,
       "subplot": {
+        "data_label": "MINERvA Data",
         "legend_pos": [0.1, 0.35, 0.65, 0.75]
       }
     },
@@ -202,6 +300,7 @@
       "ylabel": "#frac{d^{2}#sigma}{dE_{avail}dq_{3}} [10^{-38} cm^{2}/GeV^{2}]",
       "scale": 1e38,
       "subplot": {
+        "data_label": "MINERvA Data",
         "legend_pos": [0.5, 0.35, 0.95, 0.75],
         "xrange": [0, 0.5]
       }
@@ -216,7 +315,9 @@
       "ylabel": "#frac{d^{2}#sigma}{dp_{#mu}dcos_{#theta_{#mu}}} [10^{-38} cm^{2}/(GeV/c)]",
       "subplot": {
         "xrange": [0, 2],
-        "legend_pos": [0.5, 0.35, 0.95, 0.57]
+        "ymax": 0.2,
+        "data_label": "T2K Data",
+        "legend_pos": [0.5, 0.45, 1.0, 0.80]
       },
       "scale": 1e38,
       "annotate": [
@@ -235,6 +336,7 @@
       "scale": 1e38,
       "ylabel": "d^{2}#sigma_{QELike}/dp_{||}dp_{t} (10^{-38} cm^{2}/GeV^{2}/^{12}C)",
       "subplot": {
+        "data_label": "MINERvA Data",
         "legend_pos": [0.45, 0.25, 0.98, 0.75]
       }
     },
@@ -247,29 +349,42 @@
       "scale": 1e38,
       "ylabel": "d^{2}#sigma_{QELike}/dp_{||}dp_{t} (10^{-38} cm^{2}/GeV^{2}/^{12}C)",
       "subplot": {
+        "data_label": "MINERvA Data",
         "legend_pos": [0.4, 0.25, 0.98, 0.75]
       }
     },
-
     {
-      "sample": "MiniBooNE_CCQE_XSec_1DQ2_nu"
+      "sample": "MiniBooNE_CCQE_XSec_1DQ2_nu",
+      "data_label": "MiniBooNE Data",
+      "ytitle": "d#sigma/dQ^{2}_{QE} (cm^{2}/(GeV/c)^{2}) ",
+      "xtitle": "Q^{2}_{QE} (GeV/c)^{2}"
     },
     {
-      "sample": "MiniBooNE_CCQELike_XSec_1DQ2_nu"
+      "sample": "MiniBooNE_CCQELike_XSec_1DQ2_nu", 
+      "data_label": "MiniBooNE Data",
+      "ytitle": "d#sigma/dQ^{2}_{QE} (cm^{2}/(GeV/c)^{2}) ",
+      "xtitle": "Q^{2}_{QE} (GeV/c)^{2}"
     },
     {
       "sample": "MiniBooNE_CCQE_XSec_1DEnu_nu",
-      "legend_pos": "LR"
+      "data_label": "MiniBooNE Data",
+      "legend_pos": "LR", 
+      "ytitle": "d#sigma/dE_{#nu} (cm^{2}/GeV/neutron) ",
+      "xtitle": "E_{#nu} (GeV)"
     },
     {
       "sample": "MiniBooNE_CCQELike_XSec_1DEnu_nu",
-      "legend_pos": "LR"
+      "data_label": "MiniBooNE Data",
+      "legend_pos": "LR", 
+      "ytitle": "d#sigma/dE_{#nu} (cm^{2}/GeV/neutron) ",
+      "xtitle": "E_{#nu} (GeV)"
     },
     {
       "sample": "MiniBooNE_CCQE_XSec_2DTcos_nu",
       "type": "2DProjection",
       "nrows": 3,
       "ncols": 6,
+      "data_label": "MiniBooNE Data",
       "ylabel": "d^{2}#sigma/dT_{#mu}dcos#theta_{#mu} [10^{-38} cm^{2}/GeV]",
       "projection": "y",
       "scale": 1e38,
@@ -286,6 +401,7 @@
       "ncols": 6,
       "projection": "y",
       "fontsize": 25.0,
+      "data_label": "MiniBooNE Data",
       "scale": 1e38,
       "legend_pad": 18,
       "ylabel": "d^{2}#sigma/dT_{#mu}dcos#theta_{#mu} [10^{-38} cm^{2}/GeV]",
@@ -295,16 +411,22 @@
     },
     {
       "sample": "MiniBooNE_CC1pip_XSec_1DEnu_nu",
+      "data_label": "MiniBooNE Data",
       "legend_pos": "UL"
     },
     {
-      "sample": "MiniBooNE_CC1pip_XSec_1DQ2_nu"
+      "sample": "MiniBooNE_CC1pip_XSec_1DQ2_nu",
+      "data_label": "MiniBooNE Data"
     },
     {
-      "sample": "MiniBooNE_CC1pip_XSec_1DTpi_nu"
+      "sample": "MiniBooNE_CC1pip_XSec_1DTpi_nu",
+      "ymax": 0.21e-39,
+      "data_label": "MiniBooNE Data",
+      "ytitle": "d#sigma/dT_{#pi^{+}} (cm^{2}/GeV/CH_{2})"
     },
     {
-      "sample": "MiniBooNE_CC1pip_XSec_1DTu_nu"
+      "sample": "MiniBooNE_CC1pip_XSec_1DTu_nu",
+      "data_label": "MiniBooNE Data"
     },
     {
       "sample": "MiniBooNE_CC1pip_XSec_2DQ2Enu_nu",
@@ -313,6 +435,7 @@
       "ncols": 5,
       "projection": "y",
       "fontsize": 25.0,
+      "data_label": "MiniBooNE Data",
       "scale": 1e38,
       "ylabel": "d#sigma/dQ^{2} [10^{-38} cm^{2}/(MeV^{2}/c^{4})/CH_{2}]",
       "subplot": {
@@ -327,6 +450,7 @@
       "projection": "y",
       "fontsize": 25.0,
       "scale": 1e38,
+      "data_label": "MiniBooNE Data",
       "ylabel": "d^{2}#sigma/dT_{#pi}dcos#theta_{#pi} [10^{-38} cm^{2}/MeV]",
       "legend_pad": 10,
       "subplot": {
@@ -339,6 +463,7 @@
       "nrows": 5,
       "ncols": 5,
       "projection": "y",
+      "data_label": "MiniBooNE Data",
       "fontsize": 25.0,
       "scale": 1e38,
       "ylabel": "d#sigma/dT_{#pi} [10^{-38} cm^{2}/MeV]",
@@ -353,6 +478,7 @@
       "ncols": 5,
       "projection": "y",
       "fontsize": 25.0,
+      "data_label": "MiniBooNE Data",
       "scale": 1e38,
       "ylabel": "d^{2}#sigma/dT_{#mu}dcos#theta_{#mu} [10^{-38} cm^{2}/MeV]",
       "legend_pad": 20,
@@ -366,6 +492,7 @@
       "nrows": 4,
       "ncols": 6,
       "projection": "y",
+      "data_label": "MiniBooNE Data",
       "fontsize": 20.0,
       "scale": 1e38,
       "ylabel": "d#sigma/dT_{#mu} [10^{-38} cm^{2}/MeV]",
@@ -375,55 +502,75 @@
     },
     {
       "sample": "MiniBooNE_CC1pi0_XSec_1DEnu_nu",
+      "data_label": "MiniBooNE Data",
       "legend_pos": "UL"
     },
     {
-      "sample": "MiniBooNE_CC1pi0_XSec_1DQ2_nu"
+      "sample": "MiniBooNE_CC1pi0_XSec_1DQ2_nu",
+      "data_label": "MiniBooNE Data"
     },
     {
-      "sample": "MiniBooNE_CC1pi0_XSec_1DTu_nu"
+      "sample": "MiniBooNE_CC1pi0_XSec_1DTu_nu",
+      "data_label": "MiniBooNE Data"
     },
     {
       "sample": "MiniBooNE_CC1pi0_XSec_1Dcosmu_nu",
+      "data_label": "MiniBooNE Data",
       "legend_pos": "UL"
     },
     {
       "sample": "MiniBooNE_CC1pi0_XSec_1Dcospi0_nu",
+      "data_label": "MiniBooNE Data",
       "legend_pos": "UL"
     },
     {
-      "sample": "MiniBooNE_CC1pi0_XSec_1Dppi0_nu"
+      "sample": "MiniBooNE_CC1pi0_XSec_1Dppi0_nu",
+      "data_label": "MiniBooNE Data",
+      "ytitle": "d#sigma/dp_{#pi^{0}} (cm^{2}/(GeV/c)/CH_{2})",
+      "xtitle": "p_{#pi^{0}} (GeV/c)"
     },
     {
-      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtFe_nu"
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtFe_nu",
+      "data_label": "MINERvA Data", 
+      "ytitle": "d#sigma/dQ^{2}_{QE} (cm^{2}/(GeV/c)^{2}) ",
+      "xtitle": "Q^{2}_{QE} (GeV/c)^{2}"
     },
     {
-      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtRatioFe_nu"
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtRatioFe_nu",
+      "ymax": 2.5,
+      "ytitle": "d#sigma/dQ^{2}_{QE} Ratio Fe:CH ",
+      "xtitle": "Q^{2}_{QE} (GeV/c)^{2}"
     },
     {
       "sample": "MINERvA_CCinc_XSec_1Dx_ratio_Fe56_CH",
       "legend_pos": "LL"
-
     },
     {
       "sample": "MINERvA_CCinc_XSec_1DEnu_ratio_Fe56_CH",
       "legend_pos": "LL"
     },
     {
-      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtPb_nu"
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtPb_nu",
+      "data_label": "MINERvA Data",
+      "ytitle": "d#sigma/dQ^{2}_{QE} (cm^{2}/(GeV/c)^{2}) ",
+      "xtitle": "Q^{2}_{QE} (GeV/c)^{2}"
     },
     {
-      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtRatioPb_nu"
+      "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtRatioPb_nu",
+      "data_label": "MINERvA Data", 
+      "ymax": 2.5,
+      "ytitle": "d#sigma/dQ^{2}_{QE} Ratio Pb:CH ",
+      "xtitle": "Q^{2}_{QE} (GeV/c)^{2}"
     },
     {
       "sample": "MINERvA_CCinc_XSec_1Dx_ratio_Pb208_CH",
+      "data_label": "MINERvA Data", 
       "legend_pos": "LL"
-
     },
     {
       "sample": "MINERvA_CCinc_XSec_1DEnu_ratio_Pb208_CH",
+      "data_label": "MINERvA Data", 
       "legend_pos": "LL"
-
     }
   ]
 }
