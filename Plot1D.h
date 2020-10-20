@@ -47,7 +47,7 @@ public:
   class LegendPos {
   public:
     /** Default ctor. */
-    LegendPos() : draw(true), x1(0.50), y1(0.65), x2(0.88), y2(0.85) {}
+    LegendPos() : draw(true), x1(0.38), y1(0.63), x2(0.88), y2(0.86) {}
 
     /**
      * Constructor with explicit settings.
