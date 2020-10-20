@@ -67,14 +67,14 @@ void Plot2D::draw(std::string filename, TVirtualPad* pad) {
   label_x->SetTextFont(133);
   label_x->SetTextAlign(21);
   label_x->SetTextSize(fontsize);
-  label_x->DrawLatexNDC(0.5, 0.01, xlabel.c_str());
+  label_x->DrawLatexNDC(0.5, 0.02, xlabel.c_str());
 
   TLatex* label_y = new TLatex;
   label_y->SetTextFont(133);
   label_y->SetTextAngle(90);
   label_y->SetTextAlign(23);
   label_y->SetTextSize(fontsize);
-  label_y->DrawLatexNDC(0.005, 0.5, ylabel.c_str());
+  label_y->DrawLatexNDC(0.01, 0.5, ylabel.c_str());
 
   // Auto-scale the y axis
   float ymax = -999;
