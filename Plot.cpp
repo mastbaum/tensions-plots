@@ -16,7 +16,7 @@ Plot::Plot(json::Value& c) : Plot() {
 
   type = getType(c);
 
-  fontsize = type == k1D ? 15 : 30;
+  fontsize = type == k1D ? 20 : 45;
   if (c.isMember("fontsize")) {
     fontsize = c.getMember("fontsize").getReal();
   }
