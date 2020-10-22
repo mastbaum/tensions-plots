@@ -137,6 +137,7 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   pad->cd();
 
   // Draw the data first
+  hdata->SetLineWidth(0);
   hdata->SetMarkerStyle(20);
   hdata->SetMarkerSize(1);
   hdata->SetMarkerColor(kBlack);
