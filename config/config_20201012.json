@@ -1,19 +1,19 @@
 {
   "generators": [
     {
-      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/genie/nuiscomp_genie_g1810b0211a_20200907.root",
+      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/genie/nuiscomp_genie_g1802a0211a_20200907.root",
       "title": "GENIE G1802a0211a",
       "color": 600
     },
     {
 //      "filename" : "/PATH/TO/nuiscomp_genie_g1810a0211a.root",
-      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/nuwro/nuiscomp_nuwro_20200907.root",
+      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/genie/nuiscomp_genie_g1810a0211a_20200907.root",
       "title": "GENIE G1810a0211a",
       "color": 417
     },
     {
 //      "filename" : "/PATH/TO/nuiscomp_genie_g1810b0211a.root",
-      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/neut/nuiscomp_neut_20200907.root",
+      "filename" : "/pnfs/genie/persistent/users/mastbaum/nuiscomp-20200907/genie/nuiscomp_genie_g1810b0211a_20200907.root",
       "title": "GENIE G1810b0211a",
       "color": 633
     },
@@ -38,7 +38,9 @@
     },
     {
       "sample": "MINERvA_CC0pi_XSec_1DQ2_TgtCH_nu",
-       "data_label": "MINERvA Data"
+       "data_label": "MINERvA Data",
+      "ytitle": "d#sigma/dQ^{2}_{QE} (cm^{2}/(GeV/c)^{2}) ",
+      "xtitle": "Q^{2}_{QE} (GeV/c)^{2}"
     },
     {
       "sample": "MINERvA_CC0pi_XSec_1Dpt_nu",
