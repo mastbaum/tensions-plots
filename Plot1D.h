@@ -126,6 +126,7 @@ public:
   std::string ytitle;  //!< Override y title
   std::string annotate;  //!< Annotation
   std::string data_label;  //!< Data label for legend
+  float ytitle_offset;  //!< y axis title offset
 
 private:
   AxisRangeX* xranger;  //!< Axis range adjuster

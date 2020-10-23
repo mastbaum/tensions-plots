@@ -77,6 +77,8 @@ Plot1D::Plot1D(json::Value& c)
     data_label = "Data";
   }
 
+  ytitle_offset = c.isMember("ytitle_offset") ? c.getMember("ytitle_offset").getReal() : 2;
+
   if (c.isMember("legend_pos")) {
     json::Value& vpos = c.getMember("legend_pos");
     lloc = LegendPos(vpos);
@@ -156,7 +158,7 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   hdata->GetYaxis()->SetNdivisions(505);
   hdata->GetYaxis()->CenterTitle(false);
   if (type == k1D) {
-    hdata->GetYaxis()->SetTitleOffset(1.2);
+    hdata->GetYaxis()->SetTitleOffset(ytitle_offset);
   }
 
   if (xtitle != "") hdata->GetXaxis()->SetTitle(xtitle.c_str());
