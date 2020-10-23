@@ -77,7 +77,7 @@ Plot1D::Plot1D(json::Value& c)
     data_label = "Data";
   }
 
-  ytitle_offset = c.isMember("ytitle_offset") ? c.getMember("ytitle_offset").getReal() : 2;
+  ytitle_offset = c.isMember("ytitle_offset") ? c.getMember("ytitle_offset").getReal() : 1.25;
 
   if (c.isMember("legend_pos")) {
     json::Value& vpos = c.getMember("legend_pos");
