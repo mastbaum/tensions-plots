@@ -32,6 +32,14 @@ public:
    */
   TH1* getHistogram(std::string key);
 
+  /**
+   * Get the chi2/ndof as a string.
+   *
+   * @param key Name of the sample
+   * @returns "chi2/ndof" as a string
+   */
+  std::string getChi2String(std::string sample);
+
 public:
   std::string title;  //!< Generator display title
   int color;  //!< Line color

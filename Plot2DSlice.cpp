@@ -55,18 +55,6 @@ void Plot2DSlice::add(Generator* gen) {
   std::sort(mc_slice_objs.begin(), mc_slice_objs.end());
   std::sort(data_slice_objs.begin(), data_slice_objs.end());
 
-  // Find sample chi2 from NUISANCE
-  TH1D* hchi2 = (TH1D*) gen->getHistogram("likelihood_hist");
-  assert(hchi2);
-  std::string chi2_title;
-  for (int i=0; i<hchi2->GetNbinsX()+1; i++) {
-    std::string binlabel = hchi2->GetXaxis()->GetBinLabel(i);
-    if (binlabel == sample) {
-      chi2_title = Form("%1.3f", hchi2->GetBinContent(i));
-      break;
-    }
-  }
-
   // Populate initial slice plots
   if (plots.empty()) {
     plots.resize(nslices);
@@ -103,7 +91,7 @@ void Plot2DSlice::add(Generator* gen) {
   // Add MC histograms
   for (size_t i=0; i<nslices; i++) {
     TH1D* hmc = dynamic_cast<TH1D*>(gen->getHistogram(mc_slice_objs[i]));
-    std::string title = gen->title + " (#chi^{2}=" + chi2_title + ")";
+    std::string title = gen->title + " (#chi^{2}=" + gen->getChi2String(sample) + ")";
     hmc->SetTitle(title.c_str());
     hmc->SetLineWidth(1);
     plots[i]->lines.push_back(hmc);

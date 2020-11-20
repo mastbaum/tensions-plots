@@ -92,8 +92,8 @@ void Plot1D::add(Generator* gen) {
   TH1D* hmc = dynamic_cast<TH1D*>(gen->getHistogram(mc));
   assert(hmc);
 
-  // Build a legend title: name and chi2
-  std::string title = gen->title + " (#chi^{2}=" + hmc->GetTitle() + ")";
+  // Build a legend title: name and chi2/ndf
+  std::string title = gen->title + " (#chi^{2}=" + gen->getChi2String(sample) + ")";
   hmc->SetTitle(title.c_str());
   lines.push_back(hmc);
 

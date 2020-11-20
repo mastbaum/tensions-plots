@@ -60,3 +60,26 @@ TH1* Generator::getHistogram(std::string key) {
   return h;
 }
 
+
+std::string Generator::getChi2String(std::string sample) {
+  TH1D* hchi2 = (TH1D*) getHistogram("likelihood_hist");
+  TH1D* hndof = (TH1D*) getHistogram("ndof_hist");
+  assert(hchi2 && hndof);
+  std::string chi2_str, ndof_str;
+  for (int i=0; i<hchi2->GetNbinsX()+1; i++) {
+    std::string binlabel = hchi2->GetXaxis()->GetBinLabel(i);
+    if (binlabel == sample) {
+      chi2_str = Form("%1.2f", hchi2->GetBinContent(i));
+      break;
+    }
+  }
+  for (int i=0; i<hndof->GetNbinsX()+1; i++) {
+    std::string binlabel = hndof->GetXaxis()->GetBinLabel(i);
+    if (binlabel == sample) {
+      ndof_str = Form("%1.0f", hndof->GetBinContent(i));
+      break;
+    }
+  }
+  return chi2_str + "/" + ndof_str;
+}
+
