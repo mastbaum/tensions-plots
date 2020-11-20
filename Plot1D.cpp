@@ -148,6 +148,7 @@ void Plot1D::draw(std::string filename, TVirtualPad* pad) {
   hdata->GetXaxis()->SetLabelSize(fontsize);
   hdata->GetXaxis()->SetTitleSize(fontsize);
   hdata->GetXaxis()->SetNdivisions(505);
+  hdata->GetXaxis()->SetTitleOffset(1.3);
   hdata->GetXaxis()->CenterTitle(false);
 
   hdata->GetYaxis()->SetTitleFont(133);
