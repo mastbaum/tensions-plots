@@ -195,7 +195,7 @@
       "data_label": "MINERvA Data",
       "xtitle": "E_{#nu} (GeV)",
       "ytitle": "d#sigma/dE_{#nu}/nucleon (cm^{2}/GeV)",
-      "ymax": 0.25e-39
+      "ymax": 8e-39
     },
     {
       "sample": "T2K_CC0pinp_STV_XSec_1Ddpt_nu",
